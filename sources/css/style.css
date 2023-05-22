@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Margin = 0 tira a margem do body*/
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+body * {
+    box-sizing: border-box;
+}
+
+.mainlogin {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(11, 14, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftlogin {
+    /*Ocupa apenas 50 porcento da tela o resto é do rightlogin*/
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*Faz com que os elementos fiquem em uma coluna | Titulo em baixo de imagem*/
+    flex-direction: column;
+}
+
+.leftlogin h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.8vw;
+    color: aqua;
+}
+
+.leftlogin img{
+    width: 30vw;
+    max-height: 58vh;
+}
+
+.rightlogin {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardlogin {
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: 35px 30px;
+    background-color: rgb(23, 27, 66);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.315);
+}
+
+.cardlogin h1 {
+    color: rgb(0, 255, 132);
+    font-weight: 800;
+    /*Tirar a margem para ficar meio junto*/
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: 10px;
+}
+
+/*Botões*/
+.textfield input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(31, 36, 80);
+    color: rgb(214, 246, 235);
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield label {
+    width: 100%;
+    color: rgb(214, 246, 235);
+}
+
+.textfield input::placeholder {
+    color: rgb(189, 226, 235);
+}
+
+.butlogin {
+    width: 100%;
+    padding: 13px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgb(38, 16, 38);
+    background-color: rgb(124, 218, 174);
+    cursor: pointer;
+    /*Brilho | Sombra*/
+    box-shadow: 0px 0px 10px springgreen;
+}
+
+@media only screen and (max-width: 600px){
+    .mainlogin{
+        flex-direction: column;
+        display: flex;
+    }
+    .leftlogin img{
+width: 100px;
+    }
+}
+
+/*Ocultar coisas p/ celular e arrumar os displays*/
+@media only screen and (max-width: 950px){
+    .cardlogin{
+        width: 65%;
+    }
+    .leftlogin h1{
+        display: none;
+    }
+    .rightlogin{
+        width: 100%;
+        height: auto;
+    }
+    .leftlogin img{
+        width: 80vw;
+    }
+    .rightlogin{
+    width: 65vh;
+    }
+    .cardlogin{
+        width: 90%;
+    }
+}
+
